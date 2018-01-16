@@ -8,7 +8,8 @@ class Cafe < SlackCommand
   end
 
   def do
-    puts "A tomar un cafelico de #{minutes} minutes"
     slack_profile emoji: ':coffee:', text: 'cafelico'
+    sleep(minutes*60)
+    slack_profile emoji: '', text: ''
   end
 end
