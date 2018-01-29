@@ -21,8 +21,8 @@ OptionParser.new do |opts|
     command = Currando.new
   end
 
-  opts.on('--comiendo', 'parando a comer') do
-    command = Comiendo.new
+  opts.on('--comiendo', 'parando a comer') do |minutes|
+    command = Comiendo.new minutes
   end
 
   opts.on( '-h', '--help', 'Display this screen' ) do

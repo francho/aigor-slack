@@ -9,6 +9,7 @@ class Cafe < SlackCommand
 
   def do
     slack_profile emoji: ':coffee:', text: 'cafelico'
+    slack_message channel: '#spain', message: ':coffee:'
     sleep(minutes*60)
     slack_profile emoji: '', text: ''
   end
