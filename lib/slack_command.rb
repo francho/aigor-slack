@@ -19,10 +19,14 @@ class SlackCommand
       status_text: text,
       status_emoji: emoji
     }
-    slack.users_profile_set(profile: status.to_json)
+    slack.users_profile_set profile: status.to_json
   end
 
   def slack_presence(presence:)
-    slack.users_setPresence(presence: presence)
+    slack.users_setPresence presence: presence
+  end
+
+  def slack_message(channel:, message:)
+    slack.chat_postMessage channel: channel, text: message, as_user: true
   end
 end

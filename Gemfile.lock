@@ -24,6 +24,7 @@ GEM
       gli
       hashie
       websocket-driver
+    terminal-notifier (2.0.0)
     thread_safe (0.3.6)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
@@ -36,6 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   slack-ruby-client
+  terminal-notifier
 
 BUNDLED WITH
    1.16.1
